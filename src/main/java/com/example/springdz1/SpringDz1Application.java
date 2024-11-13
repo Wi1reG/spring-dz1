@@ -10,4 +10,5 @@ public class SpringDz1Application {
 		SpringApplication.run(SpringDz1Application.class, args);
 	}
 
+
 }
