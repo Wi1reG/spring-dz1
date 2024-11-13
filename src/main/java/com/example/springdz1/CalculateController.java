@@ -15,37 +15,33 @@ public class CalculateController {
     }
 
     @GetMapping
-    public String hello() {
-        return calculateService.hello();
-    }
-
-    @GetMapping(path = "/calculate")
     public String helloCalcualte() {
         return calculateService.helloCalcualte();
     }
 
     @GetMapping(path = "/plus")
-    public String plus(@RequestParam("num1") Integer a, @RequestParam("num2") Integer b) {
-        return calculateService.plus(a,b);
+    public String plus(@RequestParam(value = "num1", required = false) Integer a, @RequestParam(value = "num2", required = false) Integer b) {
+        return calculateService.plus(a, b);
 
     }
 
     @GetMapping(path = "/minus")
-    public String minus(@RequestParam("num1") Integer a, @RequestParam("num2") Integer b) {
-        return calculateService.minus(a,b);
+    public String minus(@RequestParam(value = "num1", required = false) Integer a, @RequestParam(value = "num2", required = false) Integer b) {
+        return calculateService.minus(a, b);
 
 
     }
 
     @GetMapping(path = "/multiply")
-    public String multiply(@RequestParam("num1") Integer a, @RequestParam("num2") Integer b) {
-        return calculateService.multiply(a,b);
+    public String multiply(@RequestParam(value = "num1", required = false) Integer a, @RequestParam(value = "num2", required = false) Integer b) {
+        return calculateService.multiply(a, b);
 
     }
 
     @GetMapping(path = "/divide")
-    public String divide(@RequestParam("num1") Integer a, @RequestParam("num2") Integer b) {
-        return calculateService.divide(a,b);
+    public String divide(@RequestParam(value = "num1", required = false) Integer a, @RequestParam(value = "num2", required = false) Integer b) {
+
+        return calculateService.divide(a, b);
 
     }
 
